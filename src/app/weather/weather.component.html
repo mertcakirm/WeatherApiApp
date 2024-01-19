@@ -1,0 +1,33 @@
+<div class="w-screen h-screen" style="background: rgb(45,54,172);
+background: radial-gradient(circle, rgba(45,54,172,1) 14%, rgba(13,66,145,1) 38%, rgba(38,35,152,1) 55%, rgba(23,50,138,1) 78%, rgba(49,78,172,1) 91%);">
+    <div class="text-center text-white uppercase text-5xl pt-5 font-bold">
+      Weather App
+    </div>
+    <div class="block text-center mt-10">
+      <input [(ngModel)]="newcity" onchange="" type="text" placeholder="Please write the city name" class="w-96 h-10 rounded-full border-2 text-center border-black">
+      <button (click)="setCity()"  class="w-20 h-10 rounded-2xl bg-amber-600 border-2 ml-4 border-black">SEARCH</button>
+    </div>
+    <div class="mt-10 text-white">
+      <!-- şehir adı -->
+      <h1 class="block text-center text-4xl uppercase font-bold">{{ isim }}</h1>
+      <!-- anlık tarih saat bilgileri -->
+      <div class="mt-5">
+        <p class="block text-center text-xl uppercase font-mono">{{gun}}/{{ay}}/{{yil}}</p>
+        <p class="block text-center mb-5 text-xl uppercase font-mono">{{saat}}:{{dakika}}</p>
+      </div>
+      <!-- anlık hava durumu bilgisi -->
+      <div class="text-center">
+        <img class="w-40 rounded-full mx-auto" src="{{resim}}" alt="resim">
+        <div class="text-2xl">{{hava}}</div>
+        <div class="text-2xl">Heat {{sicaklik}}° Degree</div>
+      </div>
+      <!-- diğer ayrıntılar -->
+      <div class="text-center">
+        <p class="text-xl">Sunrise {{gundogumu}}</p>
+        <p class="text-xl">Sunset {{gunbatimi}}</p>
+
+      </div>
+
+    </div>
+  </div>
+  
